@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#":  {
+  "item" : "tutorialmod:james_wig"
+    },
+    "?": {
+      "item" : "minecraft:clock"
+    }
+  },
+  "pattern": [
+    "###",
+    "#?#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:time_waster"
+  }
+}
