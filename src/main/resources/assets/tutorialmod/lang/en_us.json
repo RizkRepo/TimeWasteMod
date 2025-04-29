@@ -3,5 +3,11 @@
   "item.tutorialmod.raw_pink_garnet": "Raw Pink Garnet",
   "item.tutorialmod.ali": "Ali",
   "item.tutorialmod.time_waster": "Time Waster",
-  "item.tutorialmod.james_wig": "James Wig"
+  "item.tutorialmod.james_wig": "James Wig",
+
+  "block.tutorialmod.pink_garnet_block" : "Pink Garnet Block",
+  "block.tutorialmod.raw_pink_garnet_block" : "Raw Pink Garnet Block",
+
+  "itemgroup.tutorialmod.pink_garnet_items" : "Pink Garnet Items",
+  "itemgroup.tutorialmod.pink_garnet_blocks" : "Pink Garnet Blocks"
 }
