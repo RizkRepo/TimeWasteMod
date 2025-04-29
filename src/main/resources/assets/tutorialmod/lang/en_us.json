@@ -7,6 +7,8 @@
 
   "block.tutorialmod.pink_garnet_block" : "Pink Garnet Block",
   "block.tutorialmod.raw_pink_garnet_block" : "Raw Pink Garnet Block",
+  "block.tutorialmod.ali_cube" : "Ali Cube",
+
 
   "itemgroup.tutorialmod.pink_garnet_items" : "Pink Garnet Items",
   "itemgroup.tutorialmod.pink_garnet_blocks" : "Pink Garnet Blocks"
