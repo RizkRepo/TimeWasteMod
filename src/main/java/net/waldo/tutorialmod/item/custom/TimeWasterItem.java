@@ -33,11 +33,12 @@ public class TimeWasterItem extends Item {
             if (server!=null) {
                 final long[] currentTime = {world.getTimeOfDay()};
                 ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
+                user.getItemCooldownManager().set(this, 500);//Item Cooldown So Evil Users Can't Crash Their Games
                 Runnable task = new Runnable() {
                     int i = 1;
                     @Override
                     public void run() {
-                        if (i<6){
+                        if (i<6){ //This allows for the time to increment instead of just immediately passing, it also adds a clock like ticking sound
                             int timeIncrementer = 750;
                             currentTime[0] = currentTime[0] +(timeIncrementer*i);
                             server.setTimeOfDay(currentTime[0]);
@@ -48,27 +49,12 @@ public class TimeWasterItem extends Item {
                             scheduler.shutdown();
                         }
                     }
+
                 };
                 scheduler.scheduleAtFixedRate(task,0,1,TimeUnit.SECONDS);
-                //                Runnable task = () -> {
-//                    int timeIncrementer = 2000;
-//                    currentTime = currentTime+(timeIncrementer*i);
-//                    server.setTimeOfDay(currentTime);
-//                };
-//                 scheduler.scheduleAtFixedRate(()->{
-//                     int timeIncrementer = 2000;
-//                     currentTime = currentTime+(timeIncrementer*i);
-//                    server.setTimeOfDay(currentTime);
-//                 },0,1,TimeUnit.SECONDS);
-//                for (int i=1;i<24;i++) {
-//
-//                    int timeIncrementer = 2000;
-//                    currentTime = currentTime+(timeIncrementer*i);
-//                    server.setTimeOfDay(currentTime);
-//                    world.playSound(null,user.getBlockPos(), SoundEvents.ITEM_ELYTRA_FLYING, SoundCategory.NEUTRAL);
-//                }
 
                 world.playSound(null,user.getBlockPos(), SoundEvents.BLOCK_BEACON_ACTIVATE, SoundCategory.NEUTRAL);
+
             }
         }
         return TypedActionResult.success(stack);
