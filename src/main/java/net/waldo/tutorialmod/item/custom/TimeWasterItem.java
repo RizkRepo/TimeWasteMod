@@ -2,10 +2,13 @@ package net.waldo.tutorialmod.item.custom;
 
 import com.mojang.serialization.DataResult;
 import net.minecraft.client.session.report.ReporterEnvironment;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
@@ -33,7 +36,8 @@ public class TimeWasterItem extends Item {
             if (server!=null) {
                 final long[] currentTime = {world.getTimeOfDay()};
                 ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
-                user.getItemCooldownManager().set(this, 500);//Item Cooldown So Evil Users Can't Crash Their Games
+                user.getItemCooldownManager().set(this, 100); //Item Cooldown So Evil Users Can't Crash Their Games
+                stack.damage(1, user, LivingEntity.getSlotForHand(hand));
                 Runnable task = new Runnable() {
                     int i = 1;
                     @Override

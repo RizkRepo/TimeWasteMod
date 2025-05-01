@@ -19,12 +19,14 @@ import static net.minecraft.item.ArmorMaterials.*;
 import static net.minecraft.item.ArmorItem.Type.*;
 
 public class ModItems {
+    //Standard Items
     public static final Item PINK_GARNET = registerItem( "pink_garnet", new Item(new Item.Settings()));
     public static final Item RAW_PINK_GARNET = registerItem( "raw_pink_garnet", new Item(new Item.Settings()));
     public static final Item ALI = registerItem( "ali", new Item(new Item.Settings().food(new FoodComponent(1,1,true,1, Optional.empty(), List.of()))));
-    public static final Item TIME_WASTER = registerItem("time_waster", new TimeWasterItem(new Item.Settings()));
+    //Armor
     public static final Item JAMES_WIG = registerItem("james_wig", new ArmorItem(DIAMOND,HELMET,new Item.Settings()));
-
+    //Utility Items
+    public static final Item TIME_WASTER = registerItem("time_waster", new TimeWasterItem(new Item.Settings().maxDamage(10).maxCount(1)));
     public static final Item CHISEL = registerItem("chisel", new ChiselItem(new Item.Settings().maxDamage(32)));
 
 
