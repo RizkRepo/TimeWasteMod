@@ -13,5 +13,7 @@
 
 
   "itemgroup.tutorialmod.pink_garnet_items" : "Pink Garnet Items",
-  "itemgroup.tutorialmod.pink_garnet_blocks" : "Pink Garnet Blocks"
+  "itemgroup.tutorialmod.pink_garnet_blocks" : "Pink Garnet Blocks",
+
+  "item.tutorialmod.chisel": "Chisel"
 }

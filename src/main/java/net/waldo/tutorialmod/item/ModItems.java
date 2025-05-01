@@ -9,6 +9,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.waldo.tutorialmod.Tutorialmod;
+import net.waldo.tutorialmod.item.custom.ChiselItem;
+import net.waldo.tutorialmod.item.custom.TimeWasterItem;
 
 import java.util.List;
 import java.util.Optional;
@@ -20,9 +22,10 @@ public class ModItems {
     public static final Item PINK_GARNET = registerItem( "pink_garnet", new Item(new Item.Settings()));
     public static final Item RAW_PINK_GARNET = registerItem( "raw_pink_garnet", new Item(new Item.Settings()));
     public static final Item ALI = registerItem( "ali", new Item(new Item.Settings().food(new FoodComponent(1,1,true,1, Optional.empty(), List.of()))));
-    public static final Item TIME_WASTER = registerItem("time_waster", new Item(new Item.Settings()));
+    public static final Item TIME_WASTER = registerItem("time_waster", new TimeWasterItem(new Item.Settings()));
     public static final Item JAMES_WIG = registerItem("james_wig", new ArmorItem(DIAMOND,HELMET,new Item.Settings()));
 
+    public static final Item CHISEL = registerItem("chisel", new ChiselItem(new Item.Settings().maxDamage(32)));
 
 
     private static Item registerItem(String name, Item item){
@@ -36,6 +39,7 @@ public class ModItems {
             entries.add(PINK_GARNET);
             entries.add(RAW_PINK_GARNET);
             entries.add(TIME_WASTER);
+            entries.add(CHISEL);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
             entries.add(ALI);
