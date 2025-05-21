@@ -15,8 +15,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.waldo.tutorialmod.item.ModItems;
 
-public class AliCube extends Block {
-    public AliCube(Settings settings){
+public class PinkGarnetBlock extends Block {
+    public PinkGarnetBlock(Settings settings){
         super(settings);
     }
 
