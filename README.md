@@ -1,0 +1,1 @@
+The Time Waste Mod is a simple Minecraft Fabric Mod, it adds a few blocks and items, the focus being the Time Waster Item which skips time when used. The WATCHME.mp4 file shows a short video of the item.
